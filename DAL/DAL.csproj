@@ -85,7 +85,6 @@
     <Compile Include="EmployeeMaster.cs">
       <DependentUpon>Employee.tt</DependentUpon>
     </Compile>
-    <Compile Include="Interface\IEmployeeAccess.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
