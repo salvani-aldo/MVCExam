@@ -7,11 +7,11 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace MVCExam.Data
+namespace DAL
 {
     using System;
     using System.Collections.Generic;
-
+    
     public partial class EmployeeMaster
     {
         public int EmployeeId { get; set; }
@@ -19,6 +19,5 @@ namespace MVCExam.Data
         public string LastName { get; set; }
         public string MiddelName { get; set; }
         public System.DateTime BirthDate { get; set; }
-        public string BirthDateString { get { return BirthDate.ToShortDateString(); } }
     }
 }

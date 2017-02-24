@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace MVCExam.Data
+namespace DAL
 {
     using System;
     using System.Data.Entity;
