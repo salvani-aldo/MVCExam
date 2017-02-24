@@ -1,14 +1,11 @@
 ﻿@model IEnumerable<MVCExam.Data.EmployeeMaster>
 
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "Employee List Page";
 }
 
-<h2>Index</h2>
+<h2>@ViewBag.Title</h2>
 
-<p>
-    @Html.ActionLink("Create New", "Create")
-</p>
 <table class="table">
     <tr>
         <th>
@@ -38,13 +35,13 @@
             @Html.DisplayFor(modelItem => item.MiddelName)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.BirthDate)
+            @Html.DisplayFor(modelItem => item.BirthDateString)
         </td>
-        <td>
+        @*<td>
             @Html.ActionLink("Edit", "Edit", new { id=item.EmployeeId }) |
             @Html.ActionLink("Details", "Details", new { id=item.EmployeeId }) |
             @Html.ActionLink("Delete", "Delete", new { id=item.EmployeeId })
-        </td>
+        </td>*@
     </tr>
 }
 
