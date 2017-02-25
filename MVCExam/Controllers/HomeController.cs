@@ -10,6 +10,7 @@ namespace MVCExam.Controllers
         // GET: Home
         public ActionResult Index()
         {
+            ViewBag.PageTitle = "Employee List Page";
             return View(_employee.GetAllEmployees());
         }
     }
