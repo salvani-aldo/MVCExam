@@ -1,4 +1,5 @@
 ﻿using DAL;
+using Model;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,6 +10,6 @@ namespace BL.Interface
 {
     public interface IEmployee
     {
-        IEnumerable<EmployeeMaster> GetAllEmployees();
+        IEnumerable<EmployeeModel> GetAllEmployees();
     }
 }

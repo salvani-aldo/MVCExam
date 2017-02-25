@@ -1,16 +1,16 @@
-﻿using System.Web.Mvc;
+﻿using BL;
+using System.Web.Mvc;
 
 namespace MVCExam.Controllers
 {
     public class HomeController : Controller
     {
-        //private EmployeeInformationEntities db = new EmployeeInformationEntities();
+        Employee _employee = new Employee();
 
         // GET: Home
         public ActionResult Index()
         {
-            //return View(db.EmployeeMasters.ToList());
-            return View();
+            return View(_employee.GetAllEmployees());
         }
     }
 }

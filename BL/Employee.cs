@@ -5,6 +5,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using DAL;
+using Utilities;
+using Model;
 
 namespace BL
 {
@@ -12,9 +14,19 @@ namespace BL
     {
         EmployeeInformationEntities db = new EmployeeInformationEntities();
 
-        public IEnumerable<EmployeeMaster> GetAllEmployees()
+        public IEnumerable<EmployeeModel> GetAllEmployees()
         {
-            return db.EmployeeMasters;
+            List<EmployeeModel> model = new List<EmployeeModel>();
+            EmployeeModel mapResult;
+            var results = db.EmployeeMasters;
+
+            foreach (var result in results)
+            {
+                mapResult = result.MapToModel<EmployeeModel, EmployeeMaster>();
+                model.Add(mapResult);
+            }
+
+            return model.ToList();
         }
     }
 }
