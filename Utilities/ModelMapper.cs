@@ -17,6 +17,7 @@ namespace Utilities
         /// <returns></returns>
         public static Tmodel MapToModel<Tmodel, TMapModel>(this TMapModel input)
         {
+            AutoMapper.Mapper.Initialize(cfg => cfg.CreateMap<TMapModel, Tmodel>());
             Tmodel result = AutoMapper.Mapper.Map<TMapModel, Tmodel>(input);
 
             return result;

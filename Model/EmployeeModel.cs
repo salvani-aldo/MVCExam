@@ -13,5 +13,9 @@ namespace Model
         public string LastName { get; set; }
         public string MiddelName { get; set; }
         public System.DateTime BirthDate { get; set; }
+        public string BirthDateString
+        {
+            get { return BirthDate.ToShortDateString(); }
+        }
     }
 }

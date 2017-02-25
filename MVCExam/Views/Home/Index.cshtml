@@ -1,4 +1,4 @@
-﻿@model IEnumerable<MVCExam.Data.EmployeeMaster>
+﻿@model IEnumerable<Model.EmployeeModel>
 
 @{
     ViewBag.Title = "Employee List Page";
@@ -37,11 +37,6 @@
         <td>
             @Html.DisplayFor(modelItem => item.BirthDateString)
         </td>
-        @*<td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.EmployeeId }) |
-            @Html.ActionLink("Details", "Details", new { id=item.EmployeeId }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.EmployeeId })
-        </td>*@
     </tr>
 }
 
