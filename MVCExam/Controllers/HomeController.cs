@@ -13,5 +13,10 @@ namespace MVCExam.Controllers
             ViewBag.PageTitle = "Employee List Page";
             return View(_employee.GetAllEmployees());
         }
+
+        public ActionResult Echo()
+        {
+            return View();
+        }
     }
 }
